@@ -1,8 +1,5 @@
-# React + Vite
+# Passo a passo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Use o comando `npm create vite@5.5.2 .` para criar um projeto react utilizando o vite dentro da pasta que você está;
+- Use o comando `npm install -D tailwindcss@3.4.10 postcss@8.4.41 autoprefixer@10.4.20` para instalar o tailwind;
+- Use o comando `npx tailwindcss init -p` para inicializar o tailwind, em seguida configure o tailwind.config.js;
