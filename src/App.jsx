@@ -23,13 +23,24 @@ function App() {
     },
   ]);
 
+  function toggleTaskStatus(taskId) {
+    const newTasks = tasks.map((task) => {
+      if (task.id === taskId) {
+        return { ...task, isCompleted: !task.isCompleted };
+      }
+
+      return task;
+    });
+    setTasks(newTasks);
+  }
+
   return (
     <div className="w-screen h-screen bg-white flex justify-center p-6">
       <div className="w-[500px]">
         <h1 className="text-3xl text-slate-700 font-bold text-center mb-4">
           Gerenciador de Tarefas
         </h1>
-        <Tasks tasks={tasks} />
+        <Tasks tasks={tasks} toggleTaskStatus={toggleTaskStatus} />
       </div>
     </div>
   );
