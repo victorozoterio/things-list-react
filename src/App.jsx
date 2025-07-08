@@ -12,6 +12,23 @@ function App() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
+  // Essa função será executada uma única vez assim que o componente for montado
+  useEffect(() => {
+    const getTasks = async () => {
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/todos?_limit=10",
+        {
+          method: "GET",
+        }
+      );
+
+      const data = await response.json();
+      setTasks(data);
+    };
+    // SE VOCÊ QUISER É POSSÍVEL CHAMAR UMA API PARA PREENCHER SUA LISTA DE TAREFAS
+    // getTasks();
+  }, []);
+
   function toggleTaskStatus(taskId) {
     const newTasks = tasks.map((task) => {
       if (task.id === taskId) {
