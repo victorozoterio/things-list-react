@@ -24,7 +24,7 @@ function TaskPage() {
 
         <div className="space-y-4 p-6 bg-slate-700 rounded-md flex flex-col">
           <h2 className="text-xl text-white font-bold">{title}</h2>
-          <p className="text-white">{description}</p>
+          {description && <p className="text-white">{description}</p>}
         </div>
       </div>
     </div>
