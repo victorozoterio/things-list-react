@@ -1,0 +1,24 @@
+import { useSearchParams } from "react-router-dom";
+
+function TaskPage() {
+  const [searchParams] = useSearchParams();
+  const title = searchParams.get("title");
+  const description = searchParams.get("description");
+
+  return (
+    <div className="w-screen h-screen bg-white flex justify-center p-6">
+      <div className="w-[500px] space-y-4">
+        <h1 className="text-3xl text-slate-700 font-bold text-center mb-4">
+          Detalhes da Tarefa
+        </h1>
+
+        <div className="space-y-4 p-6 bg-slate-700 rounded-md flex flex-col">
+          <h2 className="text-xl text-white font-bold">{title}</h2>
+          <p className="text-white">{description}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default TaskPage;

@@ -5,3 +5,4 @@
 - Use o comando `npx tailwindcss init -p` para inicializar o tailwind, em seguida configure o tailwind.config.js;
 - Use o comando `npm install lucide-react@0.435.0` para instalar a biblioteca de ícones da lucide;
 - Use o comando `npm install uuid@10.0.0` para gerar um uuid para as tarefas;
+- Use o comando `npm install react-router-dom@6.26.1` para instalar a biblioteca de rotas do react;
