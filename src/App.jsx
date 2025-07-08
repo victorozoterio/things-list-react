@@ -34,13 +34,22 @@ function App() {
     setTasks(newTasks);
   }
 
+  function deleteTask(taskId) {
+    const newTasks = tasks.filter((task) => task.id !== taskId);
+    setTasks(newTasks);
+  }
+
   return (
     <div className="w-screen h-screen bg-white flex justify-center p-6">
       <div className="w-[500px]">
         <h1 className="text-3xl text-slate-700 font-bold text-center mb-4">
           Gerenciador de Tarefas
         </h1>
-        <Tasks tasks={tasks} toggleTaskStatus={toggleTaskStatus} />
+        <Tasks
+          tasks={tasks}
+          toggleTaskStatus={toggleTaskStatus}
+          deleteTask={deleteTask}
+        />
       </div>
     </div>
   );
